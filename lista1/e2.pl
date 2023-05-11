@@ -1,2 +1,2 @@
-comp(0,[]).
-comp(X,[_|Z]) :- comp(Y,Z), X is Y + 1.
+comp([],0).
+comp([_|B], X) :- comp(B,C), X is C + 1.
