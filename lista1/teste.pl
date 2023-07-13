@@ -26,3 +26,4 @@ ant(A,Z) :- pai(A,B),ant(B,Z).
 ant(A,Z) :- mae(A,B),ant(B,Z).
 
 parente(A,B) :- ant(C,A),ant(C,B).
+

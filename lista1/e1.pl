@@ -16,15 +16,15 @@ total([X],X).
 total([A|B],X) :- total(B,C), X is C + A.
 
 %select
-select(X,[X|B],B).
-select(X,[A|B],[A|C]) :- select(X,B,C).
+select(X,[X|Y],Y).
+select(X,[Y|Z],[Y|W]) :- select(X,Z,W).
 
 %append
 ap([],L,L).
 ap([A|B], L2, [A|C]) :- ap(B,L2,C).
 
 %permuta
-perm(X,[A|B]) :- select(A,X,C), perm(C,B). 
+perm(A,[B|D]) :- select(B,A,C), perm(C,D). 
 perm([],[]).
 
 %lista reversa
